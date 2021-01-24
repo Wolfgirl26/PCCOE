@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap");
+
+.Project {
+ display: flex;
+ flex-wrap: wrap;
+ transform-style: preserve-3d;
+ width: 100%;
+ height: 110vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 0 1.5rem;
+ background: url("img/overlay-bg.png");
+}
+.bg-cover {
+ z-index: 1;
+}
+.pro-text {
+ color: #0250c500;
+}
+.pro-text::after {
+ content: "";
+ width: 100%;
+ height: 100%;
+ background: rgba(255, 255, 255, 0.651);
+ position: absolute;
+ clip-path: circle(13.1% at 14% 52%);
+ z-index: 10;
+}
+
+/*----text-----*/
+.project-text .text {
+ font-size: 3rem;
+ font-family: "Montserrat", sans-serif;
+ width: 40ch;
+ overflow: hidden;
+ white-space: nowrap;
+ text-align: center;
+ animation: text 8s;
+ border-right: 1px solid rgb(252, 242, 242);
+ color: #f7f7f7c4;
+ text-shadow: 0 0 0.2px rgb(245, 245, 245);
+ border-right-style: double;
+}
+.project-text h1 {
+ font-size: 0;
+}
+.project-text span {
+ color: orangered;
+ font-size: 2rem;
+}
+@keyframes text {
+ 0% {
+  width: 0ch;
+ }
+ 50% {
+  width: 15ch;
+ }
+ 100% {
+  width: 32ch;
+ }
+}
+/*--xxx--text--xxx---*/
+
+section .Team-card {
+ position: relative;
+ width: 300px;
+ height: 320px;
+ margin: 20px;
+ transform-style: preserve-3d;
+ perspective: 1000px;
+ z-index: 100;
+}
+
+section .Team-card .box {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ transform-style: preserve-3d;
+ transition: 0.1s ease;
+}
+
+section .contentBx a {
+ display: none;
+}
+
+section .Team-card:hover .box {
+ transform: rotateY(180deg);
+}
+
+section .Team-card .box .imagx {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+}
+
+section .Team-card .box .imagx img {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ object-fit: cover;
+}
+
+section .contentBx {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgb(255, 255, 255);
+ backface-visibility: hidden;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transform-style: preserve-3d;
+ transform: rotateY(180deg);
+}
+section .contentBx a:hover {
+ color: #3d1635;
+}
+/*-------bsckground-color-----*/
+section .contentBx .box1 {
+ background-image: linear-gradient(
+  to right bottom,
+  #a445b2 0%,
+  #d41872 52%,
+  #ff0066 100%
+ );
+}
+section .contentBx .box1:hover {
+ background-image: linear-gradient(to right, #cf0f7977 0%, #fcff4496 100%);
+}
+section .contentBx .box2 {
+ background-image: linear-gradient(to right top, #d9ff02, #5dee09);
+}
+section .contentBx .box2:hover {
+ background-image: linear-gradient(to right, #cf0f7977 0%, #fcff4496 100%);
+}
+section .contentBx .box3 {
+ background-image: linear-gradient(to right top, #0250c5 0%, #d43f8d 100%);
+}
+section .contentBx .box3:hover {
+ background-image: linear-gradient(to right, #cf0f7977 0%, #fcff4496 100%);
+}
+section .contentBx .box4 {
+ background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
+}
+section .contentBx .box4:hover {
+ background-image: linear-gradient(to right, #cf0f7977 0%, #fcff4496 100%);
+}
+/*---xxx----bsckground-color---xx--*/
+section .contentBx div {
+ transform-style: preserve-3d;
+ padding: 20px;
+ transform: translateZ(100px);
+}
+
+section .contentBx div h2 {
+ color: white;
+ font-size: 20px;
+ letter-spacing: 1px;
+}
+
+section .contentBx div p {
+ color: rgb(0, 0, 0);
+ font-size: 16px;
+}
+
+@media only screen and (max-width: 750px) {
+ section .Team-card,
+ section .Team-card .box,
+ section .Team-card .box .imagx {
+  width: 120px;
+  height: 120px;
+  margin: 15px;
+ }
+ section .contentBx div h2 {
+  color: wheat;
+  font-size: 12px;
+  letter-spacing: 1px;
+ }
+ section .contentBx div p {
+  color: wheat;
+  font-size: 6px;
+ }
+ section .contentBx div a {
+  font-size: 6px;
+  display: center;
+ }
+ section {
+  margin: 1px;
+  padding: 1px;
+  align-items: left;
+  justify-content: left;
+ }
+ section .contentBx .box1:hover,
+ section .contentBx .box2:hover,
+ section .contentBx .box3:hover,
+ section .contentBx .box4:hover {
+  background-image: linear-gradient(
+   to right top,
+   #9d11ee3b 0%,
+   #d43f8c3d 100%
+  );
+ }
+}
